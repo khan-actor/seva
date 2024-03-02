@@ -2,7 +2,7 @@ pipeline {
 	agent any 
 	parameters {
 		choice(name: 'ENVIRONMENT', choices: ['QA','UAT'], description: 'Pick Environment value')
-	}
+	}/home/owaiss/Documents/devopsoftware/apache-tomcat-9.0.84/webapps
 	stages {
 	    stage('Checkout') {
 	        steps {
@@ -14,6 +14,6 @@ pipeline {
 	                 }}
 		stage('Deployment'){
 		   steps {
-		sh 'cp target/flipkart.war /home/swapnil/Documents/DevOps-Software/apache-tomcat-9.0.79/webapps'
+		sh 'cp target/seva.war /home/owaiss/Documents/devopsoftware/apache-tomcat-9.0.84/webapps'
 			}}	
 }}
